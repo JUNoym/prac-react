@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { Footer } from '../components/Footer'
-import { Links } from '../components/Links'
-import { Headline } from '../components/Headline'
+import { Main } from '../components/Main'
 
 export default function Home() {
+  const AboutButtonClicked = () => {
+    alert("AboutButtonClicked発動した")
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,14 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Headline
-          title={"About"} url={"pages/about.js"} boolean
-          code={<code className={styles.code}>{"pages/about.js"}</code>}
-        />
-        {/* propsにbooleanのみで渡すと真偽値はtrueで渡ってくる */}
-        <Links />
-      </main>
+      <Main title={"about"} path="about" funcButton={AboutButtonClicked} />
 
       <Footer />
     </div>
