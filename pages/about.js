@@ -14,7 +14,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Headline title={"About"} url={"pages/about.js"} />
+        <Headline
+          title={"About"} url={"pages/about.js"} boolean
+          code={<code className={styles.code}>{"pages/about.js"}</code>}
+        />
+        {/* propsにbooleanのみで渡すと真偽値はtrueで渡ってくる */}
         <Links />
       </main>
 

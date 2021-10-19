@@ -16,7 +16,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Headline title={"Index"} url={"pages/index.js"} />
+        <Headline
+          title={"Index"}
+          url={"pages/index.js"}
+          code={<code className={styles.code}>{"pages/index.js"}</code>}
+        />
         <Links />
       </main>
       <Footer />
